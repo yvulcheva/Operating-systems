@@ -230,7 +230,6 @@ int main(int argc, char* argv[]) {
 					if(read_s == -1){
 				       		close(fd2);
                                                 err(5,"Error while reading from %s\n",argv[2]);
-
 					}
                                         if((read_s = read(fd2,&text,sizeof(text))) > 0){
 						if(write(1,&text,sizeof(text)) != sizeof(text)){
@@ -247,8 +246,7 @@ int main(int argc, char* argv[]) {
 					slot_text(time, identif, text);
 				}
 				else
-					err(7,"Wrong format of the file!\n");	
-				
+					err(7,"Wrong format of the file!\n");		
 			}
 			if(read_s == -1){
 				close(fd2);                
